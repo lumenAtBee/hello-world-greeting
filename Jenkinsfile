@@ -21,17 +21,17 @@ node('docker'){
 	} // END stage
 	
 	stage('Publish'){
-		def server = Artifactory.server 'CI-Local-Artifactory-Server'
-		def uploadSpec = """{
-			"files":[
-				{
-					"pattern":"target/hello-*.war",
-					"target":"helloworld-greeting-project/${BUILD_NUMBER}/",
-					"props":"Integration-Tested=Yes;Performance-Tested=No"
-				}
-			]
-		}"""
-		server.upload(uploadSpec)
+	//	def server = Artifactory.server 'CI-Local-Artifactory-Server'
+	//	def uploadSpec = """{
+	//		"files":[
+	//			{
+	//				"pattern":"target/hello-*.war",
+	//				"target":"helloworld-greeting-project/${BUILD_NUMBER}/",
+	//				"props":"Integration-Tested=Yes;Performance-Tested=No"
+	//			}
+	//		]
+	//	}"""
+	//	server.upload(uploadSpec)
 	} // END stage
 
 } // END node

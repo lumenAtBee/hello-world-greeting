@@ -11,7 +11,7 @@ node('docker'){
 	} // END stage
 	
 	stage('Static Code Analysis'){
-		sh 'mvn clean verify sonar:sonar -Dsonar.projectName=General\ Code\ Analysis -Dsonar.projectKey=codeAnalysis -Dsonar.projectVersion=$BUILD_NUMBER'
+		sh 'mvn clean verify sonar:sonar -Dsonar.projectName="General Code Analysis" -Dsonar.projectKey=codeAnalysis -Dsonar.projectVersion=$BUILD_NUMBER'
 	} // END stage
 
 	stage('Integration Test'){

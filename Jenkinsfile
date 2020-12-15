@@ -1,6 +1,6 @@
 node('docker'){
 	stage('Poll'){
-		scm checkout
+		checkout scm
 	} // END stage
 	
 	stage('Build & Unit Test'){

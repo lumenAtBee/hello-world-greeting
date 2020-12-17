@@ -60,3 +60,21 @@ node('docker-performance'){
 	} // END stage
 	
 } // END node
+
+node('production'){
+	stage('Deploy to Prod'){
+		// def server = Artifactory.server 'CI-Local-Artifactory-Server'
+		//def dowloadSpec="""
+		//	{
+		//		"files":[
+		//				{
+		//					"pattern":"helloworld-greeting-project/${BUILD_NUMBER}/*.war",
+		//					"target":"/home/jenkins_ssh/tomcat/webapps/",
+		//					"props":"Performance-Tested=Yes;Integration-Tested=Yes"
+		//				}
+		//		]
+		//	}
+		//"""
+		//server.download(downloadSpec)
+	} // END stage
+} // END node
